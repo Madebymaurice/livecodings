@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  width: 100%;
+  height: 3000px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.relative {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+.to_the_left {
+  left: 150px;
+}
+
+.relative.fullwidth {
+  width: 100%;
+}
+
+.relative.with_margin {
+  margin-bottom: 60px;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ddd;
+}
+
+.abs1 {
+  width: 100px;
+}
+
+.abs2 {
+  left: auto;
+  right: 0;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 90px;
+  background-color: green;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: red;
+}
