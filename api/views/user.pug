@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  div.header
+    span Wild Code School
+
+  div.content
+    form(class='form-student' method='POST' action='/users')
+      if student
+      input#name.form-control(type='hidden', name='id', value=(student ? student.id : ""))
+
+      div.title-form
+        if student
+          span Modifier #{student.lastname} #{student.firstname}
+        else
+          span Ajouter un étudiant
+
+      div.form-group
+        label(for='firstname') Nom
+        input#name.form-control(type='text', name='firstname', value=(student ? student.firstname : ""))
+
+      div.form-group
+        label(for='lastname') Prénom
+        input#name.form-control(type='text', name='lastname', value=(student ? student.lastname : ""))
+
+      div.form-group
+        label(for='phone') Téléphone
+        input#name.form-control(type='text', name='phone', value=(student ? student.phone : ""))
+
+      div.form-group.submit
+        if student
+          div.edit Modifier
+          div.delete Supprimer
+        else
+          div.new Valider

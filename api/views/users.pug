@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div.header
+    span Wild Code School
+
+  div.content
+    div.list-students
+      each student in students
+        a(href='/users/' + student.id)
+          div.student
+            span #{student.lastname} #{student.firstname}
+            span=student.phone
+
+      a(href='/users/new')
+        div.student.new
+          span +
+          span Ajouter un nouvel élève

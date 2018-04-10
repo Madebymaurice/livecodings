@@ -1,0 +1,194 @@
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  background-color: #f4a443;
+  color: white;
+  font-size: 42px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  height: auto;
+}
+
+.main .content {
+  justify-content: center;
+  align-items: center;
+}
+
+.main .content a {
+  padding: 10px 15px;
+  border: 1px solid #f4a443;
+  border-radius: 3px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #f4a443;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.main .content a:hover {
+  border: 1px solid transparent;
+  background-color: #f4a443;
+  box-shadow: inset 2px 2px 10px rgba(255, 255, 255, 0.4);
+}
+
+.main .content a:active {
+  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.list-students, .form-student {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.list-students .student {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 250px;
+  margin: 10px 20px;
+  text-align: center;
+  border: 2px solid #f4a443;
+  background-image: url("http://via.placeholder.com/200x250/ffffff/f4a443");
+  background-repeat: no-repeat;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.list-students .student:not(.new) {
+  justify-content: flex-end;
+}
+
+.list-students .student.new {
+  background-image: none;
+}
+
+.list-students .student.new span:first-child {
+  flex-grow: 1;
+  line-height: 200px;
+  color: #f4a443;
+  font-size: 100px;
+}
+
+.list-students .student.new span:last-child {
+  height: 36px;
+  line-height: 36px;
+}
+
+.list-students .student.new span:last-child, .list-students .student:not(.new) span {
+  padding: 5px 0;
+  background-color: rgba(244, 164, 67, 0.9);
+  font-weight: bold;
+  color: white;
+  letter-spacing: .5px;
+}
+
+.student .content {
+  align-items: center;
+}
+
+.form-student {
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+  max-height: 450px;
+  margin: 0 auto;
+  border: 2px solid #f4a443;
+  border-radius: 2px;
+}
+
+.form-student .title-form, .form-student .form-group.submit {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background-color: #f4a443;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-student .form-group {
+  width: 200px;
+  margin: 20px 0;
+}
+
+.form-student .form-group label {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+  color: #f4a443;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form-student .form-group input {
+  border: none;
+  padding: 5px 5px 5px 10px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: rgba(244, 164, 67, 0.8);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), inset 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-student .form-group input:focus {
+  outline: none;
+  background-color: #f4a443;
+}
+
+.form-student .form-group.submit {
+  margin: 20px 0 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-student .form-group .edit, .form-student .form-group .delete {
+  display: inline-block;
+  width: 50%;
+}
+
+.form-student .form-group.submit .new:hover, .form-student .form-group.submit .edit:hover, .form-student .form-group.submit .delete:hover {
+  background-color: #e79837;
+}
+
+.form-student .form-group.submit .new:active, .form-student .form-group.submit .edit:active, .form-student .form-group.submit .delete:active {
+  background-color: #d58d34;
+}
+
+.form-student .form-group.submit .delete {
+  background-color: #b02323;
+}
+
+.form-student .form-group.submit .delete:hover {
+  background-color: #9e2020;
+}
+
+.form-student .form-group.submit .delete:active {
+  background-color: #8e1c1c;
+}
